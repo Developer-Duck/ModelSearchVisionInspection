@@ -15,7 +15,7 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <Canvas >
-                    <TextBlock Text="Welcome Back" FontSize="17" FontWeight="Bold" Canvas.Left="181" Canvas.Top="10"></TextBlock>
+                    <TextBlock Text="Welcome Back" FontSize="20" FontWeight="Bold" Canvas.Left="200" Canvas.Top="10"></TextBlock>
                 </Canvas>
             </Grid>
             <Grid Grid.Row="1" Margin="100,0,100,0">
@@ -23,27 +23,33 @@
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
-                <Canvas Grid.Row="0">
+                <Canvas Grid.Row="0" Margin="10 ,0">
                     <TextBlock Text="UserName or Email" FontWeight="Bold" Foreground="#4D4D4D"></TextBlock>
                     <Border  Canvas.Top="18" CornerRadius="4" Background="White" BorderBrush="Gray" BorderThickness="1" Height="30" Width="340" HorizontalAlignment="Left" VerticalAlignment="Center">
-                        <TextBox FontSize="11" FontWeight="Bold" Foreground="Gray" VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Padding="5,0,0,0"></TextBox>
+                        <TextBox FontSize="11" FontWeight="Bold" Foreground="Gray" VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Padding="5,0,0,0" x:Name="txtUsername"></TextBox>
                     </Border>
                 </Canvas>
-                <Canvas Grid.Row="1">
+                <Canvas Grid.Row="1" Margin="10 ,0">
                     <TextBlock Text="Password" FontWeight="Bold" Foreground="#4D4D4D"></TextBlock>
                     <Border  Canvas.Top="18" CornerRadius="4" Background="White" BorderBrush="Gray" BorderThickness="1" Height="30" Width="340" HorizontalAlignment="Left" VerticalAlignment="Center">
-                        <PasswordBox  FontSize="11" FontWeight="Bold" Foreground="Gray" VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Padding="5,0,0,0"></PasswordBox>
+                        <PasswordBox  FontSize="11" FontWeight="Bold" Foreground="Gray" VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Padding="5,0,0,0" x:Name="txtPassword"></PasswordBox>
                     </Border>
                 </Canvas>
             </Grid>
             <Grid Grid.Row="2" Margin="100,0,100,0">
-                <Canvas>
+                <Canvas Margin="10 ,0">
                     <CheckBox Canvas.Top="5" Content="Remember me " FlowDirection="RightToLeft"></CheckBox>
-                    <Border Canvas.Top="30" Width="340" CornerRadius="15" Background="#3399FF" BorderBrush="Gray" BorderThickness="1" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" >
-                        <Button VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Content="Login" Foreground="White" FontWeight="Bold" FontSize="11" ></Button>
+                    <Border Canvas.Top="35" Width="340"  Height="30" Style="{StaticResource LinkBorder}">
+                        <Button VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Content="Login" Foreground="White" FontWeight="Bold" FontSize="11" Click="LoginButton_Click">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
                     </Border>
-                    <TextBlock Canvas.Top="70" Canvas.Left="85"><Run Text="Dont't have an account?"/><Run Language="ko-kr" Text="  "/><Underline Foreground="#3399FF"><Run Foreground="#3399FF" Text="Sign Up" /></Underline></TextBlock>
-                    <TextBlock Canvas.Top="95" Canvas.Left="140"  Text="Forget password?" TextDecorations="Underline" FontSize="11"/>
+                    <TextBlock Canvas.Top="75" Canvas.Left="85"><Run Text="Dont't have an account?"/><Run Language="ko-kr" Text="  "/><Underline Foreground="#3399FF"><Run Foreground="#3399FF" Text="Sign Up" /></Underline></TextBlock>
+                    <TextBlock Canvas.Top="100" Canvas.Left="140"  Text="Forget password?" TextDecorations="Underline" FontSize="11"/>
                 </Canvas>
             </Grid>
         </Grid>

@@ -9,6 +9,6 @@
         AllowsTransparency="True" 
         Title="MainWindow" Height="820" Width="1250">
     <Grid>
-
+        <TextBlock Text="mainPage" FontSize="50" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
     </Grid>
 </Window>

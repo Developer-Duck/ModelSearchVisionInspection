@@ -23,5 +23,20 @@ namespace ModelSearchVisionInspection.Views.Login
         {
             InitializeComponent();
         }
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            // 간단한 로그인 체크 예시
+            if (txtUsername.Text == "admin" && txtPassword.Password == "1234")
+            {
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+                this.Close(); // 로그인 창 닫기
+            }
+            else
+            {
+                MessageBox.Show("Invalid credentials");
+            }
+        }
+
     }
 }
