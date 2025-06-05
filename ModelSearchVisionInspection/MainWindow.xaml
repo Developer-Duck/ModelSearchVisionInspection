@@ -5,10 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ModelSearchVisionInspection"
         mc:Ignorable="d"
-        WindowStyle="None" 
-        AllowsTransparency="True" 
-        Title="MainWindow" Height="820" Width="1250">
+        Title="MainWindow" Height="820" Width="1250"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBlock Text="mainPage" FontSize="50" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+        <TextBlock Text="mainPage" FontSize="50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </Grid>
 </Window>

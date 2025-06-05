@@ -6,7 +6,79 @@
         xmlns:local="clr-namespace:ModelSearchVisionInspection.Views.SignUp"
         mc:Ignorable="d"
         Title="SignUpMain" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Margin ="100 30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Canvas >
+                <TextBlock Text="Create Account" FontSize="20" FontWeight="Bold" Canvas.Left="200" Canvas.Top="10"></TextBlock>
+            </Canvas>
+        </Grid>
+        <Grid Grid.Row="1" Margin="100,0,100,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Canvas Grid.Row="0" Margin="10 ,5">
+                <TextBlock Text="UserName or Email" FontWeight="Bold" Foreground="#4D4D4D"></TextBlock>
+                <Border  Canvas.Top="18" CornerRadius="4" Background="White" BorderBrush="Gray" BorderThickness="1" Height="30" Width="340" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <TextBox FontSize="11" FontWeight="Bold" Foreground="Gray" VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Padding="5,0,0,0" x:Name="SignIntxtUsername"></TextBox>
+                </Border>
+            </Canvas>
+            <Canvas Grid.Row="1" Margin="10 ,5">
+                <TextBlock Text="Password" FontWeight="Bold" Foreground="#4D4D4D"></TextBlock>
+                <Border  Canvas.Top="18" CornerRadius="4" Background="White" BorderBrush="Gray" BorderThickness="1" Height="30" Width="340" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <PasswordBox  FontSize="11" FontWeight="Bold" Foreground="Gray" VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Padding="5,0,0,0" x:Name="SignIntxtPassword"></PasswordBox>
+                </Border>
+            </Canvas>
+            <Canvas Grid.Row="2" Margin="10 ,5">
+                <TextBlock Text="Check Password" FontWeight="Bold" Foreground="#4D4D4D"></TextBlock>
+                <Border  Canvas.Top="18" CornerRadius="4" Background="White" BorderBrush="Gray" BorderThickness="1" Height="30" Width="340" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <PasswordBox  FontSize="11" FontWeight="Bold" Foreground="Gray" VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Padding="5,0,0,0" x:Name="ChacktxtPassword"></PasswordBox>
+                </Border>
+            </Canvas>
+            
+            
+        </Grid>
+        <Grid Grid.Row="2" Margin="100,0,100,0">
+            <Canvas Margin="10 ,0">
+                <CheckBox Content="개인 정보 수집 동의" FontSize="10" FontWeight="Bold" VerticalContentAlignment="Center"></CheckBox>
+                <Button VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Content="Sign In" Foreground="White" FontWeight="Bold" FontSize="11" Width="340" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="30" >
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="border" CornerRadius="8" BorderThickness="1" Background="#3399FF" BorderBrush="Transparent">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <Setter TargetName="border" Property="Background" Value="#3399CD" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <TextBlock Canvas.Top="75" Canvas.Left="85" FontSize="12">
+                <Run Text="Already have an account?"/>
+                <Hyperlink Click="MoveToLogin">
+                   <Run Text="Login"/>
+                    <Hyperlink.Style>
+                        <Style TargetType="Hyperlink">
+                            <Setter Property="Foreground" Value="#3399FF"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Foreground" Value="#0E7DEC"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Hyperlink.Style>
+                </Hyperlink>
+                </TextBlock>
+            </Canvas>
+        </Grid>
     </Grid>
 </Window>

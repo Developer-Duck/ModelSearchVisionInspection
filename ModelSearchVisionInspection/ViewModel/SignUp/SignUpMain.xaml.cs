@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ModelSearchVisionInspection.Views.Login;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,12 @@ namespace ModelSearchVisionInspection.Views.SignUp
         public SignUpMain()
         {
             InitializeComponent();
+        }
+        private void MoveToLogin(object sender, RoutedEventArgs e)
+        {
+            var LoginWindow = new LoginMain();
+            LoginWindow.Show();  // SignUp 창을 일반 창으로 열기
+            this.Close();         // 로그인 창 닫기
         }
     }
 }
