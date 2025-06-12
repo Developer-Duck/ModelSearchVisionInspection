@@ -46,8 +46,8 @@
         </Grid>
         <Grid Grid.Row="2" Margin="100,0,100,0">
             <Canvas Margin="10 ,0">
-                <CheckBox Content="개인 정보 수집 동의" FontSize="10" FontWeight="Bold" VerticalContentAlignment="Center"></CheckBox>
-                <Button VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Content="Sign In" Foreground="White" FontWeight="Bold" FontSize="11" Width="340" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="30" >
+                <CheckBox Content="개인 정보 수집 동의" FontSize="10" FontWeight="Bold" VerticalContentAlignment="Center" x:Name="check_information"></CheckBox>
+                <Button VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Content="Sign In" Foreground="White" FontWeight="Bold" FontSize="11" Width="340" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="30" x:Name="signInButton" >
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border x:Name="border" CornerRadius="8" BorderThickness="1" Background="#3399FF" BorderBrush="Transparent">
