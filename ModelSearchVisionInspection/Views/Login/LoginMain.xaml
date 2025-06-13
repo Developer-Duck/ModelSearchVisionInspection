@@ -26,7 +26,7 @@
                 <Canvas Grid.Row="0" Margin="10 ,0">
                     <TextBlock Text="UserName or Email" FontWeight="Bold" Foreground="#4D4D4D"></TextBlock>
                     <Border  Canvas.Top="18" CornerRadius="4" Background="White" BorderBrush="Gray" BorderThickness="1" Height="30" Width="340" HorizontalAlignment="Left" VerticalAlignment="Center">
-                        <TextBox FontSize="11" FontWeight="Bold" Foreground="Gray" VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Padding="5,0,0,0" x:Name="LogintxtUsername"></TextBox>
+                        <TextBox FontSize="11" FontWeight="Bold" Foreground="Gray" VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Padding="5,0,0,0" x:Name="LogintxtUsername" Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                     </Border>
                 </Canvas>
                 <Canvas Grid.Row="1" Margin="10 ,0">
@@ -38,9 +38,9 @@
             </Grid>
             <Grid Grid.Row="2" Margin="100,0,100,0">
                 <Canvas Margin="10 ,0">
-                    <CheckBox Canvas.Top="5" Content="Remember me"></CheckBox>
+                    <CheckBox Canvas.Top="5" Content="Remember me" IsChecked="{Binding RememberMe}"></CheckBox>
 
-                    <Button VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Content="Login" Foreground="White" FontWeight="Bold" FontSize="11" Click="LoginButton_Click" Width="340" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="30" >
+                    <Button VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Content="Login" Foreground="White" FontWeight="Bold" FontSize="11" Command="{Binding LoginCommand}" Width="340" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="30" >
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border  x:Name="border" CornerRadius="8" BorderThickness="1" Background="#3399FF" BorderBrush="Transparent">
@@ -57,7 +57,7 @@
 
                     <TextBlock Canvas.Top="75" Canvas.Left="85" FontSize="12">
                         <Run Text="Don't have an account? "/>
-                        <Hyperlink Click="MoveToSignUp">
+                        <Hyperlink Command="{Binding MoveToSignUpCommand}">
                            <Run Text="Sign Up"/>
                             <Hyperlink.Style>
                                 <Style TargetType="Hyperlink">

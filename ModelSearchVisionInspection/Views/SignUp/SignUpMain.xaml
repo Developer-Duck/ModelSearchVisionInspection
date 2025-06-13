@@ -26,7 +26,7 @@
             <Canvas Grid.Row="0" Margin="10 ,5">
                 <TextBlock Text="UserName or Email" FontWeight="Bold" Foreground="#4D4D4D"></TextBlock>
                 <Border  Canvas.Top="18" CornerRadius="4" Background="White" BorderBrush="Gray" BorderThickness="1" Height="30" Width="340" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <TextBox FontSize="11" FontWeight="Bold" Foreground="Gray" VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Padding="5,0,0,0" x:Name="SignIntxtUsername"></TextBox>
+                    <TextBox FontSize="11" FontWeight="Bold" Foreground="Gray" VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Padding="5,0,0,0" x:Name="SignIntxtUsername" Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 </Border>
             </Canvas>
             <Canvas Grid.Row="1" Margin="10 ,5">
@@ -41,13 +41,11 @@
                     <PasswordBox  FontSize="11" FontWeight="Bold" Foreground="Gray" VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Padding="5,0,0,0" x:Name="ChacktxtPassword"></PasswordBox>
                 </Border>
             </Canvas>
-            
-            
         </Grid>
         <Grid Grid.Row="2" Margin="100,0,100,0">
             <Canvas Margin="10 ,0">
-                <CheckBox Content="개인 정보 수집 동의" FontSize="10" FontWeight="Bold" VerticalContentAlignment="Center" x:Name="check_information"></CheckBox>
-                <Button VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Content="Sign In" Foreground="White" FontWeight="Bold" FontSize="11" Width="340" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="30" x:Name="signInButton" >
+                <CheckBox Content="개인 정보 수집 동의" FontSize="10" FontWeight="Bold" VerticalContentAlignment="Center" x:Name="check_information" IsChecked="{Binding IsPrivacyAgreed}"></CheckBox>
+                <Button VerticalContentAlignment="Center" BorderThickness="0" Background="Transparent" Content="Sign In" Foreground="White" FontWeight="Bold" FontSize="11" Width="340" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="30" x:Name="signInButton" Command="{Binding SignUpCommand}">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border x:Name="border" CornerRadius="8" BorderThickness="1" Background="#3399FF" BorderBrush="Transparent">
@@ -64,7 +62,7 @@
 
                 <TextBlock Canvas.Top="75" Canvas.Left="85" FontSize="12">
                 <Run Text="Already have an account?"/>
-                <Hyperlink Click="MoveToLogin">
+                <Hyperlink Command="{Binding MoveToLoginCommand}">
                    <Run Text="Login"/>
                     <Hyperlink.Style>
                         <Style TargetType="Hyperlink">
