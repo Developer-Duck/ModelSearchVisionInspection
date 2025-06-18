@@ -4,6 +4,16 @@
              xmlns:local="clr-namespace:ModelSearchVisionInspection"
 			 StartupUri="Views/Login/LoginMain.xaml">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/images/minimize.xaml"/>
+                <ResourceDictionary Source="/images/out.xaml" />
+                <ResourceDictionary Source="/images/cam.xaml" />
+                <ResourceDictionary Source="/images/car.xaml" />
+                <ResourceDictionary Source="/images/folder.xaml" />
+                <ResourceDictionary Source="/Images/pattern_teaching.xaml" />
+                <ResourceDictionary Source="/Images/setting.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

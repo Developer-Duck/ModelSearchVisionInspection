@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <DrawingGroup x:Key="cam">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0.0,0.0,24.0,24.0"/>
+        </DrawingGroup.ClipGeometry>
+        <GeometryDrawing Brush="#ff000000">
+            <GeometryDrawing.Pen>
+                <Pen Brush="#ff000000" Thickness="0.0" DashCap="Flat"/>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 20.41 19.928 H 3.54 a 1.5 1.5 0 0 1 -1.5 -1.5 V 9.28804 a 1.5 1.5 0 0 1 1.5 -1.5 h 2.658 a 0.5 0.5 0 0 0 0.5 -0.454 l 0.166 -1.8 a 1.49 1.49 0 0 1 1.5 -1.454 h 7.23 a 1.5 1.5 0 0 1 1.5 1.5 l 0.164 1.756 a 0.5 0.5 0 0 0 0.5 0.454 h 2.658 a 1.5 1.5 0 0 1 1.5 1.5 v 9.14 a 1.5 1.5 0 0 1 -1.506 1.498 z M 3.54 8.78804 a 0.5 0.5 0 0 0 -0.5 0.5 v 9.14 a 0.5 0.5 0 0 0 0.5 0.5 h 16.87 a 0.5 0.5 0 0 0 0.5 -0.5 V 9.28804 a 0.5 0.5 0 0 0 -0.5 -0.5 h -2.658 a 1.5 1.5 0 0 1 -1.494 -1.362 l -0.166 -1.8 a 0.515 0.515 0 0 0 -0.5 -0.546 H 8.36 a 0.5 0.5 0 0 0 -0.5 0.5 l -0.168 1.846 a 1.5 1.5 0 0 1 -1.494 1.362 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ff000000">
+            <GeometryDrawing.Pen>
+                <Pen Brush="#ff000000" Thickness="0.0" DashCap="Flat"/>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="m 11.975 17.285 a 4 4 0 1 1 4 -4 a 4 4 0 0 1 -4 4 z m 0 -7 a 3 3 0 1 0 3 3 a 3 3 0 0 0 -3 -3 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingImage Drawing="{StaticResource cam}" x:Key="di_cam"/>
+</ResourceDictionary>

@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <DrawingGroup x:Key="setting">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0.0,0.0,512.0,512.0"/>
+        </DrawingGroup.ClipGeometry>
+        <GeometryDrawing>
+            <GeometryDrawing.Pen>
+                <Pen Brush="#ff000000" LineJoin="Round" Thickness="32.0" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 262.29 192.31 a 64 64 0 1 0 57.4 57.4 a 64.13 64.13 0 0 0 -57.4 -57.4 z M 416.39 256 a 154.34 154.34 0 0 1 -1.53 20.79 l 45.21 35.46 a 10.81 10.81 0 0 1 2.45 13.75 l -42.77 74 a 10.81 10.81 0 0 1 -13.14 4.59 l -44.9 -18.08 a 16.11 16.11 0 0 0 -15.17 1.75 A 164.48 164.48 0 0 1 325 400.8 a 15.94 15.94 0 0 0 -8.82 12.14 l -6.73 47.89 a 11.08 11.08 0 0 1 -10.68 9.17 h -85.54 a 11.11 11.11 0 0 1 -10.69 -8.87 l -6.72 -47.82 a 16.07 16.07 0 0 0 -9 -12.22 a 155.3 155.3 0 0 1 -21.46 -12.57 a 16 16 0 0 0 -15.11 -1.71 l -44.89 18.07 a 10.81 10.81 0 0 1 -13.14 -4.58 l -42.77 -74 a 10.8 10.8 0 0 1 2.45 -13.75 l 38.21 -30 a 16.05 16.05 0 0 0 6 -14.08 c -0.36 -4.17 -0.58 -8.33 -0.58 -12.5 s 0.21 -8.27 0.58 -12.35 a 16 16 0 0 0 -6.07 -13.94 l -38.19 -30 A 10.81 10.81 0 0 1 49.48 186 l 42.77 -74 a 10.81 10.81 0 0 1 13.14 -4.59 l 44.9 18.08 a 16.11 16.11 0 0 0 15.17 -1.75 A 164.48 164.48 0 0 1 187 111.2 a 15.94 15.94 0 0 0 8.82 -12.14 l 6.73 -47.89 A 11.08 11.08 0 0 1 213.23 42 h 85.54 a 11.11 11.11 0 0 1 10.69 8.87 l 6.72 47.82 a 16.07 16.07 0 0 0 9 12.22 a 155.3 155.3 0 0 1 21.46 12.57 a 16 16 0 0 0 15.11 1.71 l 44.89 -18.07 a 10.81 10.81 0 0 1 13.14 4.58 l 42.77 74 a 10.8 10.8 0 0 1 -2.45 13.75 l -38.21 30 a 16.05 16.05 0 0 0 -6.05 14.08 c 0.33 4.14 0.55 8.3 0.55 12.47 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingImage Drawing="{StaticResource setting}" x:Key="di_setting"/>
+</ResourceDictionary>

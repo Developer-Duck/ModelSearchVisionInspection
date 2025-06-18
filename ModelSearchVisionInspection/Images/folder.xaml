@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <DrawingGroup x:Key="folder">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0.0,0.0,512.0,512.0"/>
+        </DrawingGroup.ClipGeometry>
+        <GeometryDrawing>
+            <GeometryDrawing.Pen>
+                <Pen Brush="#ff000000" LineJoin="Round" Thickness="32.0" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 64 192 v -72 a 40 40 0 0 1 40 -40 h 75.89 a 40 40 0 0 1 22.19 6.72 l 27.84 18.56 a 40 40 0 0 0 22.19 6.72 H 408 a 40 40 0 0 1 40 40 v 40" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing>
+            <GeometryDrawing.Pen>
+                <Pen Brush="#ff000000" LineJoin="Round" Thickness="32.0" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 479.9 226.55 L 463.68 392 a 40 40 0 0 1 -39.93 40 H 88.25 a 40 40 0 0 1 -39.93 -40 L 32.1 226.55 A 32 32 0 0 1 64 192 h 384.1 a 32 32 0 0 1 31.8 34.55 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingImage Drawing="{StaticResource folder}" x:Key="di_folder"/>
+</ResourceDictionary>
