@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <DrawingGroup x:Key="cam_number1">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0.0,0.0,16.0,16.0"/>
+        </DrawingGroup.ClipGeometry>
+        <GeometryDrawing Brush="#ff000000">
+            <GeometryDrawing.Pen>
+                <Pen Brush="#ff000000" Thickness="0.0" DashCap="Flat"/>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="m 0 4.96 a 2 2 0 0 1 2 -2 h 7.5 a 2 2 0 0 1 1.983 1.738 l 3.11 -1.382 A 1 1 0 0 1 16 4.229 v 7.462 a 1 1 0 0 1 -1.406 0.913 L 11.483 11.222 A 2 2 0 0 1 9.5 12.96 H 2 a 2 2 0 0 1 -2 -2 z m 11.5 5.175 l 3.5 1.556 V 4.229 L 11.5 5.785 Z M 2 3.96 a 1 1 0 0 0 -1 1 v 6 a 1 1 0 0 0 1 1 h 7.5 a 1 1 0 0 0 1 -1 v -6 a 1 1 0 0 0 -1 -1 z"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing>
+            <GeometryDrawing.Pen>
+                <Pen Brush="#ff000000" LineJoin="Round" Thickness="0.72" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 5.09852 7.27207 L 5.81852 6.55206 V 9.43208" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingImage Drawing="{StaticResource cam_number1}" x:Key="di_cam_number1"/>
+</ResourceDictionary>

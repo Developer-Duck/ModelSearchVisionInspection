@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <DrawingGroup x:Key="cursor">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0.0,0.0,256.0,256.0"/>
+        </DrawingGroup.ClipGeometry>
+        <GeometryDrawing Brush="#ff000000">
+            <GeometryDrawing.Pen>
+                <Pen Brush="#ff000000" Thickness="0.0" DashCap="Flat"/>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 220.49 207.8 L 207.8 220.49 a 12 12 0 0 1 -17 0 l -56.57 -56.57 L 115 214.08 l -0.13 0.33 A 15.84 15.84 0 0 1 100.26 224 l -0.78 0 a 15.82 15.82 0 0 1 -14.41 -11 L 32.8 52.92 A 15.95 15.95 0 0 1 52.92 32.8 L 213 85.07 a 16 16 0 0 1 1.41 29.8 l -0.33 0.13 l -50.16 19.27 l 56.57 56.56 A 12 12 0 0 1 220.49 207.8 Z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingImage Drawing="{StaticResource cursor}" x:Key="di_cursor"/>
+</ResourceDictionary>

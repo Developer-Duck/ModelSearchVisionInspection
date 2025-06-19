@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <DrawingGroup x:Key="tool_search">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0.0,0.0,512.0,512.0"/>
+        </DrawingGroup.ClipGeometry>
+        <GeometryDrawing Brush="#ff000000">
+            <GeometryDrawing.Pen>
+                <Pen Brush="#ff000000" Thickness="0.0" DashCap="Flat"/>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 337.509 305.372 h -17.501 l -6.571 -5.486 c 20.791 -25.232 33.922 -57.054 33.922 -93.257 C 347.358 127.632 283.896 64 205.135 64 C 127.452 64 64 127.632 64 206.629 s 63.452 142.628 142.225 142.628 c 35.011 0 67.831 -13.167 92.991 -34.008 l 6.561 5.487 v 17.551 L 415.18 448 L 448 415.086 L 337.509 305.372 z m -131.284 0 c -54.702 0 -98.463 -43.887 -98.463 -98.743 c 0 -54.858 43.761 -98.742 98.463 -98.742 c 54.7 0 98.462 43.884 98.462 98.742 c 0 54.856 -43.762 98.743 -98.462 98.743 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingImage Drawing="{StaticResource tool_search}" x:Key="di_tool_search"/>
+</ResourceDictionary>

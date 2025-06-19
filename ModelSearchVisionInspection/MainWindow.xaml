@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ModelSearchVisionInspection"
         mc:Ignorable="d"
-        Height="820" Width="1250"
+        Height="820" Width="1440"
         WindowStyle="None" 
         AllowsTransparency="True" 
         WindowStartupLocation="CenterScreen">
@@ -27,7 +27,7 @@
                         <ColumnDefinition Width="60" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center">
-                        <TextBlock Text="PLC Connection" FontSize="16" FontWeight="Bold" VerticalAlignment="Center" ></TextBlock>
+                        <TextBlock Text="PLC Connection" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" ></TextBlock>
                         <Ellipse Width="20" Height="20" Fill="#39FF14" Margin="15 0" ></Ellipse>
                     </StackPanel>
                     <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
@@ -43,11 +43,11 @@
         </Border>
         <Grid Grid.Row="1">
             <Border BorderBrush="Black" BorderThickness="1">
-                <TabControl Width="1255" Padding="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TabControl Width="1450" Padding="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TabControl.Resources>
                         <Style TargetType="TabItem" >
                             <Setter Property="Height" Value="35"/>
-                            <Setter Property="Width" Value="250"/>
+                            <Setter Property="Width" Value="288"/>
                             <Setter Property="BorderBrush" Value="Black"/>
                             <Setter Property="BorderThickness" Value="1"/>
                             <Setter Property="Padding" Value="0"/>
@@ -66,11 +66,480 @@
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="30" />
-                                <RowDefinition Height="*" />
+                                <RowDefinition Height="80" />
+                                <RowDefinition Height="400" />
                             </Grid.RowDefinitions>
-                            <Grid Grid.Row="0" Width="1250">
+                            <Grid Grid.Row="0" Width="1440">
                                 <Border BorderThickness="1" BorderBrush="Black">
                                     <TextBlock Text="- MEASUREMENT" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Margin="10 0" ></TextBlock>
+                                </Border>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1.3*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Border Grid.Column="0" BorderBrush="Black" BorderThickness="1">
+                                    <Grid Grid.Column="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="1.5*" />
+                                        </Grid.RowDefinitions>
+                                        <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,2" Background="#828027" >
+                                            <Grid Grid.Row="0">
+                                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                    <Image Source="{StaticResource di_search}" Width="20" Height="20" Margin="7 0"></Image>
+                                                    <TextBlock Text="SEARCH RESULT MODEL" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Foreground="White"></TextBlock>
+                                                </StackPanel>
+                                            </Grid>
+                                        </Border>
+                                        <Grid Grid.Row="1">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="2.5*" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Border Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,0">
+                                                <Grid Grid.Column="0" HorizontalAlignment="Center">
+                                                    <TextBlock Text="null" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                                                </Grid>
+                                            </Border>
+                                            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1,0,0,0">
+                                                <Grid Grid.Column="1" HorizontalAlignment="Center">
+                                                    <TextBlock Text="null" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                                                </Grid>
+                                            </Border>
+                                        </Grid>
+                                    </Grid>
+                                </Border>
+                                <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1">
+                                    <Grid Grid.Column="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="1.5*" />
+                                        </Grid.RowDefinitions>
+                                        <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,2">
+                                            <Grid Grid.Row="0" Background="#193e0f">
+                                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                    <Image Source="{StaticResource di_good}" Width="20" Height="20" Margin="7 0"></Image>
+                                                    <TextBlock Text="OK COUNT" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Foreground="White"></TextBlock>
+                                                </StackPanel>
+                                            </Grid>
+                                        </Border>
+                                        <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1,0,0,0">
+                                            <Grid Grid.Row="1" HorizontalAlignment="Center">
+                                                <TextBlock Text="null" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                                            </Grid>
+                                        </Border>
+                                    </Grid>
+                                </Border>
+                                <Border Grid.Column="2" BorderBrush="Black" BorderThickness="1">
+                                    <Grid Grid.Column="2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="1.5*" />
+                                        </Grid.RowDefinitions>
+                                        <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,2">
+                                            <Grid Grid.Row="0" Background="#e63222">
+                                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                    <Image Source="{StaticResource di_bad}" Width="20" Height="20" Margin="7 0"></Image>
+                                                    <TextBlock Text="NG COUNT" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Foreground="White"></TextBlock>
+                                                </StackPanel>
+                                            </Grid>
+                                        </Border>
+                                        <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1,0,0,0">
+                                            <Grid Grid.Row="1" HorizontalAlignment="Center">
+                                                <TextBlock Text="null" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                                            </Grid>
+                                        </Border>
+                                    </Grid>
+                                </Border>
+                                <Border Grid.Column="3" BorderBrush="Black" BorderThickness="1">
+                                    <Grid Grid.Column="3">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="1.5*" />
+                                        </Grid.RowDefinitions>
+                                        <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,2">
+                                            <Grid Grid.Row="0" Background="#969694">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="2.5*" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                                                    <Image Source="{StaticResource di_total_count}" Width="20" Height="20" Margin="7 0"></Image>
+                                                    <TextBlock Text="TOTAL COUNT" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Foreground="White"></TextBlock>
+                                                </StackPanel>
+                                                <Grid Grid.Column="1">
+                                                    <Button Background="#636162">
+                                                        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center">
+                                                            <Image Source="{StaticResource di_reset}" Width="15" Height="15" Margin="5 0" ></Image>
+                                                            <TextBlock Text="Reset" FontWeight="Bold" FontSize="15" Foreground="White"></TextBlock>
+                                                        </StackPanel>
+                                                    </Button>
+                                                </Grid>
+                                            </Grid>
+                                        </Border>
+                                        <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1,0,0,0">
+                                            <Grid Grid.Row="1" HorizontalAlignment="Center">
+                                                <TextBlock Text="null" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                                            </Grid>
+                                        </Border>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0.5">
+                                    <Grid Grid.Column="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="1.3*" />
+                                            <RowDefinition Height="10*" />
+                                            <RowDefinition Height="35" />
+                                        </Grid.RowDefinitions>
+                                        <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,1">
+                                            <Grid Grid.Row="0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="2.5*" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10 0">
+                                                    <Image Source="{StaticResource di_cam_number1}" Width="35" Height="35" Margin="15 0"></Image>
+                                                    <TextBlock Text="CAMERA 1 IMAGE" FontSize="15" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                                                    <Ellipse Width="20" Height="20" Fill="#39FF14" Margin="15 0" ></Ellipse>
+                                                </StackPanel>
+                                                <Grid Grid.Column="1">
+                                                    <Button>
+                                                        <Grid>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="1*" />
+                                                                <ColumnDefinition Width="2*" />
+                                                            </Grid.ColumnDefinitions>
+                                                            <Grid Grid.Column="0" Margin="10 0">
+                                                                <Image Source="{StaticResource di_captur}" Width="25" Height="25"></Image>
+                                                            </Grid>
+                                                            <Grid Grid.Column="1" Margin="10 0">
+                                                                <TextBlock FontSize="14" FontWeight="Bold" TextAlignment="Center">
+                                                                        Image <LineBreak/> Capture
+                                                                </TextBlock>
+                                                            </Grid>
+                                                        </Grid>
+                                                    </Button>
+                                                </Grid>
+                                            </Grid>
+                                        </Border>
+                                        <Grid Grid.Row="1">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="25" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0,0,1,0">
+                                                <Grid Grid.Column="0">
+                                                    <StackPanel>
+                                                        <Button Width="25" Height="25">
+                                                            <Image Source="{StaticResource di_tool_search}" Width="12" Height="12"></Image>
+                                                        </Button>
+                                                        <Button Width="25" Height="25">
+                                                            <Image Source="{StaticResource di_cursor}" Width="12" Height="12"></Image>
+                                                        </Button>
+                                                        <Button Width="25" Height="25">
+                                                            <Image Source="{StaticResource di_hand}" Width="12" Height="12"></Image>
+                                                        </Button>
+                                                    </StackPanel>
+                                                </Grid>
+                                            </Border>
+                                            <Grid Grid.Column="1">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*" />
+                                                    <RowDefinition Height="20" />
+                                                </Grid.RowDefinitions>
+                                                <Grid Grid.Row="0">
+                                                    <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
+                                                        <Image></Image>
+                                                    </ScrollViewer>
+                                                </Grid>
+                                                <Border Grid.Row="1" BorderBrush="Black" BorderThickness="0,1,0,0" >
+                                                    <Grid Grid.Row="1" Margin="5 0" VerticalAlignment="Center">
+                                                        <TextBlock Text=" 1920 x 1080 0.33x 32-bit image X: 120, Y: 250 (000,000)" FontFamily="Consolas" Foreground="Gray" FontSize="11"></TextBlock>
+                                                    </Grid>
+                                                </Border>
+                                            </Grid>
+                                        </Grid>
+                                        <Border Grid.Row="2" BorderBrush="Black" BorderThickness="0,1,0,0">
+                                            <Grid Grid.Row="2">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="1.5*" />
+                                                    <ColumnDefinition Width="1.5*" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Column="0">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                        <TextBlock Text="Pattern No." FontSize="15" FontWeight="Bold"></TextBlock>
+                                                    </Grid>
+                                                    <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#eaeaea" Margin="3">
+                                                        <TextBlock Text="null" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                                                    </Grid>
+                                                </Grid>
+                                                <Grid Grid.Column="1">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                        <TextBlock Text="Score" FontSize="15" FontWeight="Bold"></TextBlock>
+                                                    </Grid>
+                                                    <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#eaeaea" Margin="2">
+                                                        <TextBlock Text="null" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                                                    </Grid>
+                                                </Grid>
+                                                <Grid Grid.Column="2">
+                                                    <Button>
+                                                        <TextBlock Text="Sunroof OK" FontSize="15" FontWeight="Bold"></TextBlock>
+                                                    </Button>
+                                                </Grid>
+                                            </Grid>
+                                        </Border>
+                                    </Grid>
+                                </Border>
+                                <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0.5">
+                                    <Grid Grid.Column="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="1.3*" />
+                                            <RowDefinition Height="10*" />
+                                            <RowDefinition Height="35" />
+                                        </Grid.RowDefinitions>
+                                        <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,1">
+                                            <Grid Grid.Row="0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="2.5*" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10 0">
+                                                    <Image Source="{StaticResource di_cam_number1}" Width="35" Height="35" Margin="15 0"></Image>
+                                                    <TextBlock Text="CAMERA 2 IMAGE" FontSize="15" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                                                    <Ellipse Width="20" Height="20" Fill="#39FF14" Margin="15 0" ></Ellipse>
+                                                </StackPanel>
+                                                <Grid Grid.Column="1">
+                                                    <Button>
+                                                        <Grid>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="1*" />
+                                                                <ColumnDefinition Width="2*" />
+                                                            </Grid.ColumnDefinitions>
+                                                            <Grid Grid.Column="0" Margin="10 0">
+                                                                <Image Source="{StaticResource di_captur}" Width="25" Height="25"></Image>
+                                                            </Grid>
+                                                            <Grid Grid.Column="1" Margin="10 0">
+                                                                <TextBlock FontSize="14" FontWeight="Bold" TextAlignment="Center">
+                                                                    Image <LineBreak/> Capture
+                                                                </TextBlock>
+                                                            </Grid>
+                                                        </Grid>
+                                                    </Button>
+                                                </Grid>
+                                            </Grid>
+                                        </Border>
+                                        <Grid Grid.Row="1">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="25" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0,0,1,0">
+                                                <Grid Grid.Column="0">
+                                                    <StackPanel>
+                                                        <Button Width="25" Height="25">
+                                                            <Image Source="{StaticResource di_tool_search}" Width="12" Height="12"></Image>
+                                                        </Button>
+                                                        <Button Width="25" Height="25">
+                                                            <Image Source="{StaticResource di_cursor}" Width="12" Height="12"></Image>
+                                                        </Button>
+                                                        <Button Width="25" Height="25">
+                                                            <Image Source="{StaticResource di_hand}" Width="12" Height="12"></Image>
+                                                        </Button>
+                                                    </StackPanel>
+                                                </Grid>
+                                            </Border>
+                                            <Grid Grid.Column="1">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*" />
+                                                    <RowDefinition Height="20" />
+                                                </Grid.RowDefinitions>
+                                                <Grid Grid.Row="0">
+                                                    <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
+                                                        <Image></Image>
+                                                    </ScrollViewer>
+                                                </Grid>
+                                                <Border Grid.Row="1" BorderBrush="Black" BorderThickness="0,1,0,0" >
+                                                    <Grid Grid.Row="1" Margin="5 0" VerticalAlignment="Center">
+                                                        <TextBlock Text=" 1920 x 1080 0.33x 32-bit image X: 120, Y: 250 (000,000)" FontFamily="Consolas" Foreground="Gray" FontSize="11"></TextBlock>
+                                                    </Grid>
+                                                </Border>
+                                            </Grid>
+                                        </Grid>
+                                        <Border Grid.Row="2" BorderBrush="Black" BorderThickness="0,1,0,0">
+                                            <Grid Grid.Row="2">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="1.5*" />
+                                                    <ColumnDefinition Width="1.5*" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Column="0">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                        <TextBlock Text="Pattern No." FontSize="15" FontWeight="Bold"></TextBlock>
+                                                    </Grid>
+                                                    <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#eaeaea" Margin="3">
+                                                        <TextBlock Text="null" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                                                    </Grid>
+                                                </Grid>
+                                                <Grid Grid.Column="1">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                        <TextBlock Text="Score" FontSize="15" FontWeight="Bold"></TextBlock>
+                                                    </Grid>
+                                                    <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#eaeaea" Margin="2">
+                                                        <TextBlock Text="null" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                                                    </Grid>
+                                                </Grid>
+                                                <Grid Grid.Column="2">
+                                                    <Button>
+                                                        <TextBlock Text="Sunroof OK" FontSize="15" FontWeight="Bold"></TextBlock>
+                                                    </Button>
+                                                </Grid>
+                                            </Grid>
+                                        </Border>
+                                    </Grid>
+                                </Border>
+                                <Border Grid.Column="2" BorderBrush="Black" BorderThickness="0.5">
+                                    <Grid Grid.Column="2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="1.3*" />
+                                            <RowDefinition Height="10*" />
+                                            <RowDefinition Height="35" />
+                                        </Grid.RowDefinitions>
+                                        <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,1">
+                                            <Grid Grid.Row="0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="2.5*" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10 0">
+                                                    <Image Source="{StaticResource di_cam_number1}" Width="35" Height="35" Margin="15 0"></Image>
+                                                    <TextBlock Text="CAMERA 3 IMAGE" FontSize="15" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                                                    <Ellipse Width="20" Height="20" Fill="#39FF14" Margin="15 0" ></Ellipse>
+                                                </StackPanel>
+                                                <Grid Grid.Column="1">
+                                                    <Button>
+                                                        <Grid>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="1*" />
+                                                                <ColumnDefinition Width="2*" />
+                                                            </Grid.ColumnDefinitions>
+                                                            <Grid Grid.Column="0" Margin="10 0">
+                                                                <Image Source="{StaticResource di_captur}" Width="25" Height="25"></Image>
+                                                            </Grid>
+                                                            <Grid Grid.Column="1" Margin="10 0">
+                                                                <TextBlock FontSize="14" FontWeight="Bold" TextAlignment="Center">
+                                                                     Image <LineBreak/> Capture
+                                                                </TextBlock>
+                                                            </Grid>
+                                                        </Grid>
+                                                    </Button>
+                                                </Grid>
+                                            </Grid>
+                                        </Border>
+                                        <Grid Grid.Row="1">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="25" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0,0,1,0">
+                                                <Grid Grid.Column="0">
+                                                    <StackPanel>
+                                                        <Button Width="25" Height="25">
+                                                            <Image Source="{StaticResource di_tool_search}" Width="12" Height="12"></Image>
+                                                        </Button>
+                                                        <Button Width="25" Height="25">
+                                                            <Image Source="{StaticResource di_cursor}" Width="12" Height="12"></Image>
+                                                        </Button>
+                                                        <Button Width="25" Height="25">
+                                                            <Image Source="{StaticResource di_hand}" Width="12" Height="12"></Image>
+                                                        </Button>
+                                                    </StackPanel>
+                                                </Grid>
+                                            </Border>
+                                            <Grid Grid.Column="1">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*" />
+                                                    <RowDefinition Height="20" />
+                                                </Grid.RowDefinitions>
+                                                <Grid Grid.Row="0">
+                                                    <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
+                                                        <Image></Image>
+                                                    </ScrollViewer>
+                                                </Grid>
+                                                <Border Grid.Row="1" BorderBrush="Black" BorderThickness="0,1,0,0" >
+                                                    <Grid Grid.Row="1" Margin="5 0" VerticalAlignment="Center">
+                                                        <TextBlock Text=" 1920 x 1080 0.33x 32-bit image X: 120, Y: 250 (000,000)" FontFamily="Consolas" Foreground="Gray" FontSize="11"></TextBlock>
+                                                    </Grid>
+                                                </Border>
+                                            </Grid>
+                                        </Grid>
+                                        <Border Grid.Row="2" BorderBrush="Black" BorderThickness="0,1,0,0">
+                                            <Grid Grid.Row="2">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="1.5*" />
+                                                    <ColumnDefinition Width="1.5*" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Column="0">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                        <TextBlock Text="Pattern No." FontSize="15" FontWeight="Bold"></TextBlock>
+                                                    </Grid>
+                                                    <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#eaeaea" Margin="3">
+                                                        <TextBlock Text="null" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                                                    </Grid>
+                                                </Grid>
+                                                <Grid Grid.Column="1">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                        <TextBlock Text="Score" FontSize="15" FontWeight="Bold"></TextBlock>
+                                                    </Grid>
+                                                    <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#eaeaea" Margin="2">
+                                                        <TextBlock Text="null" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                                                    </Grid>
+                                                </Grid>
+                                                <Grid Grid.Column="2">
+                                                    <Button>
+                                                        <TextBlock Text="-" FontSize="15" FontWeight="Bold"></TextBlock>
+                                                    </Button>
+                                                </Grid>
+                                            </Grid>
+                                        </Border>
+                                    </Grid>
                                 </Border>
                             </Grid>
                         </Grid>
@@ -87,7 +556,7 @@
                                 <RowDefinition Height="30" />
                                 <RowDefinition Height="100" />
                             </Grid.RowDefinitions>
-                            <Grid Grid.Row="0" Width="1250">
+                            <Grid Grid.Row="0" Width="1440">
                                 <Border BorderThickness="1" BorderBrush="Black">
                                     <TextBlock Text="- MODEL SETTING" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Margin="10 0" ></TextBlock>
                                 </Border>
@@ -109,7 +578,7 @@
                                 <RowDefinition Height="30" />
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
-                            <Grid Grid.Row="0" Width="1250">
+                            <Grid Grid.Row="0" Width="1440">
                                 <Border BorderThickness="1" BorderBrush="Black">
                                     <TextBlock Text="- PATTERN TEACHING" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Margin="10 0" ></TextBlock>
                                 </Border>
@@ -128,7 +597,7 @@
                                 <RowDefinition Height="30" />
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
-                            <Grid Grid.Row="0" Width="1250">
+                            <Grid Grid.Row="0" Width="1440">
                                 <Border BorderThickness="1" BorderBrush="Black">
                                     <TextBlock Text="- DATA VIEW" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Margin="10 0" ></TextBlock>
                                 </Border>
@@ -147,11 +616,11 @@
                                 <RowDefinition Height="30" />
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
-                            <Grid Grid.Row="0" Width="1250">
+                            <Grid Grid.Row="0" Width="1440">
                                 <Border BorderThickness="1" BorderBrush="Black">
                                     <TextBlock Text="- I/O &amp; CAM SETTING" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Margin="10 0" ></TextBlock>
                                 </Border>
-                             </Grid>
+                            </Grid>
                         </Grid>
                     </TabItem>
                 </TabControl>

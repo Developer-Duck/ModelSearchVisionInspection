@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <DrawingGroup x:Key="search">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0.0,0.0,512.0,512.0"/>
+        </DrawingGroup.ClipGeometry>
+        <GeometryDrawing Brush="#ff000000">
+            <GeometryDrawing.Pen>
+                <Pen Brush="#ff000000" Thickness="0.0" DashCap="Flat"/>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 443.5 420.2 L 336.7 312.4 c 20.9 -26.2 33.5 -59.4 33.5 -95.5 c 0 -84.5 -68.5 -153 -153.1 -153 S 64 132.5 64 217 s 68.5 153 153.1 153 c 36.6 0 70.1 -12.8 96.5 -34.2 l 106.1 107.1 c 3.2 3.4 7.6 5.1 11.9 5.1 c 4.1 0 8.2 -1.5 11.3 -4.5 c 6.6 -6.3 6.8 -16.7 0.6 -23.3 z m -226.4 -83.1 c -32.1 0 -62.3 -12.5 -85 -35.2 c -22.7 -22.7 -35.2 -52.9 -35.2 -84.9 c 0 -32.1 12.5 -62.3 35.2 -84.9 c 22.7 -22.7 52.9 -35.2 85 -35.2 s 62.3 12.5 85 35.2 c 22.7 22.7 35.2 52.9 35.2 84.9 c 0 32.1 -12.5 62.3 -35.2 84.9 c -22.7 22.7 -52.9 35.2 -85 35.2 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingImage Drawing="{StaticResource search}" x:Key="di_search"/>
+</ResourceDictionary>

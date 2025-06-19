@@ -13,7 +13,18 @@
                 <ResourceDictionary Source="/images/folder.xaml" />
                 <ResourceDictionary Source="/Images/pattern_teaching.xaml" />
                 <ResourceDictionary Source="/Images/setting.xaml" />
+                <ResourceDictionary Source="/Images/search.xaml" />
+                <ResourceDictionary Source="/Images/good.xaml" />
+                <ResourceDictionary Source="/Images/bad.xaml" />
+                <ResourceDictionary Source="/Images/reset.xaml" />
+                <ResourceDictionary Source="/Images/total_count.xaml" />
+                <ResourceDictionary Source="/Images/cam_number1.xaml" />
+                <ResourceDictionary Source="/Images/captur.xaml" />
+                <ResourceDictionary Source="/Images/tool_search.xaml" />
+                <ResourceDictionary Source="/Images/cursor.xaml" />
+                <ResourceDictionary Source="/Images/hand.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
+    
 </Application>
