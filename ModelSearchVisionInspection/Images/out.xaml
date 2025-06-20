@@ -6,7 +6,7 @@
         </DrawingGroup.ClipGeometry>
         <GeometryDrawing>
             <GeometryDrawing.Pen>
-                <Pen Brush="#ff000000" LineJoin="Round" Thickness="32.0" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
+                <Pen Brush="White" LineJoin="Round" Thickness="32.0" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
             </GeometryDrawing.Pen>
             <GeometryDrawing.Geometry>
                 <PathGeometry Figures="M 368 368 L 144 144 m 224 0 L 144 368" FillRule="Nonzero"/>

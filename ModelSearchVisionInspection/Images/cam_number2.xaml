@@ -4,9 +4,9 @@
         <DrawingGroup.ClipGeometry>
             <RectangleGeometry Rect="0.0,0.0,16.0,16.0"/>
         </DrawingGroup.ClipGeometry>
-        <GeometryDrawing Brush="#ff000000">
+        <GeometryDrawing Brush="#fcc419">
             <GeometryDrawing.Pen>
-                <Pen Brush="#ff000000" Thickness="0.0" DashCap="Flat"/>
+                <Pen Brush="#fcc419" Thickness="0.0" DashCap="Flat"/>
             </GeometryDrawing.Pen>
             <GeometryDrawing.Geometry>
                 <PathGeometry Figures="m 0 4.96 a 2 2 0 0 1 2 -2 h 7.5 a 2 2 0 0 1 1.983 1.738 l 3.11 -1.382 A 1 1 0 0 1 16 4.229 v 7.462 a 1 1 0 0 1 -1.406 0.913 L 11.483 11.222 A 2 2 0 0 1 9.5 12.96 H 2 a 2 2 0 0 1 -2 -2 z m 11.5 5.175 l 3.5 1.556 V 4.229 L 11.5 5.785 Z M 2 3.96 a 1 1 0 0 0 -1 1 v 6 a 1 1 0 0 0 1 1 h 7.5 a 1 1 0 0 0 1 -1 v -6 a 1 1 0 0 0 -1 -1 z"/>
@@ -14,12 +14,12 @@
         </GeometryDrawing>
         <GeometryDrawing>
             <GeometryDrawing.Pen>
-                <Pen Brush="#ff000000" LineJoin="Round" Thickness="0.719999" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
+                <Pen Brush="#fcc419" LineJoin="Round" Thickness="0.719999" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
             </GeometryDrawing.Pen>
             <GeometryDrawing.Geometry>
                 <PathGeometry Figures="m 5.04 6.56 h 1.08 a 0.359999 0.36 0 0 1 0.359999 0.36 v 0.72 a 0.359999 0.36 0 0 1 -0.359999 0.36 H 5.39999 a 0.359999 0.36 0 0 0 -0.359999 0.36 v 0.72 a 0.359999 0.36 0 0 0 0.359999 0.36 h 1.08" FillRule="Nonzero"/>
             </GeometryDrawing.Geometry>
         </GeometryDrawing>
     </DrawingGroup>
-    <DrawingImage Drawing="{StaticResource cam_number1}" x:Key="di_cam_number1"/>
+    <DrawingImage Drawing="{StaticResource cam_number1}" x:Key="di_cam_number2"/>
 </ResourceDictionary>

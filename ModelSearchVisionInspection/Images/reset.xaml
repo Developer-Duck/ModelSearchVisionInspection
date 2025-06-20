@@ -4,9 +4,9 @@
         <DrawingGroup.ClipGeometry>
             <RectangleGeometry Rect="0.0,0.0,24.0,24.0"/>
         </DrawingGroup.ClipGeometry>
-        <GeometryDrawing Brush="#ff000000">
+        <GeometryDrawing Brush="#fcc419">
             <GeometryDrawing.Pen>
-                <Pen Brush="#ff000000" Thickness="0.0" DashCap="Flat"/>
+                <Pen Brush="#fcc419" Thickness="0.0" DashCap="Flat"/>
             </GeometryDrawing.Pen>
             <GeometryDrawing.Geometry>
                 <PathGeometry Figures="M 2 12 C 2 17.5228 6.47715 22 12 22 C 17.5228 22 22 17.5228 22 12 C 22 6.47715 17.5228 2 12 2 V 4 C 16.4183 4 20 7.58172 20 12 C 20 16.4183 16.4183 20 12 20 C 7.58172 20 4 16.4183 4 12 C 4 9.53614 5.11383 7.33243 6.86543 5.86492 L 9 8 V 2 L 3 2 L 5.44648 4.44656 C 3.33509 6.28002 2 8.9841 2 12 Z" FillRule="Nonzero"/>

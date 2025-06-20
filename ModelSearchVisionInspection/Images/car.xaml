@@ -6,7 +6,7 @@
         </DrawingGroup.ClipGeometry>
         <GeometryDrawing>
             <GeometryDrawing.Pen>
-                <Pen Brush="#ff000000" LineJoin="Round" Thickness="32.0" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
+                <Pen Brush="#fcc419" LineJoin="Round" Thickness="32.0" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
             </GeometryDrawing.Pen>
             <GeometryDrawing.Geometry>
                 <PathGeometry Figures="m 80 224 l 37.78 -88.15 C 123.93 121.5 139.6 112 157.11 112 h 197.78 c 17.51 0 33.18 9.5 39.33 23.85 L 432 224 m -352 0 h 352 v 144 H 80 z m 32 144 v 32 H 80 v -32 m 352 0 v 32 h -32 v -32" FillRule="Nonzero"/>
@@ -14,7 +14,7 @@
         </GeometryDrawing>
         <GeometryDrawing>
             <GeometryDrawing.Pen>
-                <Pen Brush="#ff000000" LineJoin="Round" Thickness="32.0" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
+                <Pen Brush="#fcc419" LineJoin="Round" Thickness="32.0" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
             </GeometryDrawing.Pen>
             <GeometryDrawing.Geometry>
                 <EllipseGeometry RadiusX="16.0" RadiusY="16.0" Center="144.0,288.0"/>
@@ -22,7 +22,7 @@
         </GeometryDrawing>
         <GeometryDrawing>
             <GeometryDrawing.Pen>
-                <Pen Brush="#ff000000" LineJoin="Round" Thickness="32.0" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
+                <Pen Brush="#fcc419" LineJoin="Round" Thickness="32.0" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
             </GeometryDrawing.Pen>
             <GeometryDrawing.Geometry>
                 <EllipseGeometry RadiusX="16.0" RadiusY="16.0" Center="368.0,288.0"/>

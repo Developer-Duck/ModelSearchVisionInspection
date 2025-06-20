@@ -6,7 +6,7 @@
         </DrawingGroup.ClipGeometry>
         <GeometryDrawing>
             <GeometryDrawing.Pen>
-                <Pen Brush="#ff000000" LineJoin="Round" Thickness="1.3" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
+                <Pen Brush="#fcc419" LineJoin="Round" Thickness="1.3" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
             </GeometryDrawing.Pen>
             <GeometryDrawing.Geometry>
                 <PathGeometry Figures="M 11.5 20 h -6.5 a 2 2 0 0 1 -2 -2 v -9 a 2 2 0 0 1 2 -2 h 1 a 2 2 0 0 0 2 -2 a 1 1 0 0 1 1 -1 h 6 a 1 1 0 0 1 1 1 a 2 2 0 0 0 2 2 h 1 a 2 2 0 0 1 2 2 v 3" FillRule="Nonzero"/>
@@ -14,7 +14,7 @@
         </GeometryDrawing>
         <GeometryDrawing>
             <GeometryDrawing.Pen>
-                <Pen Brush="#ff000000" LineJoin="Round" Thickness="1.3" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
+                <Pen Brush="#fcc419" LineJoin="Round" Thickness="1.3" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
             </GeometryDrawing.Pen>
             <GeometryDrawing.Geometry>
                 <PathGeometry Figures="M 9 13 a 3 3 0 1 0 6 0 a 3 3 0 0 0 -6 0" FillRule="Nonzero"/>
@@ -22,7 +22,7 @@
         </GeometryDrawing>
         <GeometryDrawing>
             <GeometryDrawing.Pen>
-                <Pen Brush="#ff000000" LineJoin="Round" Thickness="1.3" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
+                <Pen Brush="#fcc419" LineJoin="Round" Thickness="1.3" DashCap="Round" EndLineCap="Round" StartLineCap="Round"/>
             </GeometryDrawing.Pen>
             <GeometryDrawing.Geometry>
                 <PathGeometry Figures="M 19 22.5 a 4.75 4.75 0 0 1 3.5 -3.5 a 4.75 4.75 0 0 1 -3.5 -3.5 a 4.75 4.75 0 0 1 -3.5 3.5 a 4.75 4.75 0 0 1 3.5 3.5" FillRule="Nonzero"/>
