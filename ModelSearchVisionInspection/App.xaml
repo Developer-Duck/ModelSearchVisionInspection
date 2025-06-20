@@ -19,6 +19,9 @@
                 <ResourceDictionary Source="/Images/reset.xaml" />
                 <ResourceDictionary Source="/Images/total_count.xaml" />
                 <ResourceDictionary Source="/Images/cam_number1.xaml" />
+                <ResourceDictionary Source="/Images/cam_number2.xaml" />
+                <ResourceDictionary Source="/Images/cam_number3.xaml" />
+                <ResourceDictionary Source="/Images/cam_number4.xaml" />
                 <ResourceDictionary Source="/Images/captur.xaml" />
                 <ResourceDictionary Source="/Images/tool_search.xaml" />
                 <ResourceDictionary Source="/Images/cursor.xaml" />
