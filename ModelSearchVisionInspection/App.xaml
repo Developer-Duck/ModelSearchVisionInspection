@@ -26,6 +26,9 @@
                 <ResourceDictionary Source="/Images/tool_search.xaml" />
                 <ResourceDictionary Source="/Images/cursor.xaml" />
                 <ResourceDictionary Source="/Images/hand.xaml" />
+                <ResourceDictionary Source="/Images/save.xaml" />
+                <ResourceDictionary Source="/Images/autoMod.xaml" />
+                <ResourceDictionary Source="/Images/start.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

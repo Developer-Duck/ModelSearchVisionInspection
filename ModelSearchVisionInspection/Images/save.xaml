@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <DrawingGroup x:Key="save">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0.0,0.0,448.0,512.0"/>
+        </DrawingGroup.ClipGeometry>
+        <GeometryDrawing Brush="#fcc419">
+            <GeometryDrawing.Pen>
+                <Pen Brush="#fcc419" Thickness="0.0" DashCap="Flat"/>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 433.941 129.941 l -83.882 -83.882 A 48 48 0 0 0 316.118 32 H 48 C 21.49 32 0 53.49 0 80 v 352 c 0 26.51 21.49 48 48 48 h 352 c 26.51 0 48 -21.49 48 -48 V 163.882 a 48 48 0 0 0 -14.059 -33.941 z M 272 80 v 80 H 144 V 80 h 128 z m 122 352 H 54 a 6 6 0 0 1 -6 -6 V 86 a 6 6 0 0 1 6 -6 h 42 v 104 c 0 13.255 10.745 24 24 24 h 176 c 13.255 0 24 -10.745 24 -24 V 83.882 l 78.243 78.243 a 6 6 0 0 1 1.757 4.243 V 426 a 6 6 0 0 1 -6 6 z M 224 232 c -48.523 0 -88 39.477 -88 88 s 39.477 88 88 88 s 88 -39.477 88 -88 s -39.477 -88 -88 -88 z m 0 128 c -22.056 0 -40 -17.944 -40 -40 s 17.944 -40 40 -40 s 40 17.944 40 40 s -17.944 40 -40 40 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingImage Drawing="{StaticResource save}" x:Key="di_save"/>
+</ResourceDictionary>

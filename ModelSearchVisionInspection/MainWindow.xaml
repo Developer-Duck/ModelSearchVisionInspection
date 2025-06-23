@@ -7,9 +7,11 @@
         xmlns:MeasurementView="clr-namespace:ModelSearchVisionInspection.Views.TabItem"
         xmlns:ModelSettingView="clr-namespace:ModelSearchVisionInspection.Views.TabItem"
         mc:Ignorable="d"
-        Height="900" Width="1440"
+        Height="{Binding WindowHeight}" Width="{Binding WindowWidth}"
         WindowStyle="None" 
         AllowsTransparency="True" 
+        WindowState="Maximized"
+        ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
     <Grid VerticalAlignment="Top" Background="#0e1f06">
         <Grid.RowDefinitions>
@@ -45,11 +47,11 @@
         </Border>
         <Grid Grid.Row="1">
             <Border BorderBrush="Black" BorderThickness="1">
-                <TabControl Width="1445" Padding="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TabControl Width="{Binding TabControlWidth}" Padding="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TabControl.Resources>
                         <Style TargetType="TabItem" >
                             <Setter Property="Height" Value="35"/>
-                            <Setter Property="Width" Value="288"/>
+                            <Setter Property="Width" Value="{Binding TabItemWidth}"/>
                             <Setter Property="BorderBrush" Value="Black"/>
                             <Setter Property="BorderThickness" Value="1"/>
                             <Setter Property="Padding" Value="0"/>
@@ -100,7 +102,7 @@
                                 <RowDefinition Height="30" />
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
-                            <Grid Grid.Row="0" Width="1440">
+                            <Grid Grid.Row="0" Width="{Binding WindowWidth}">
                                 <Border BorderThickness="1" BorderBrush="Black" Background="#606a62">
                                     <TextBlock Text="- PATTERN TEACHING" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Margin="10 0" Foreground="White"></TextBlock>
                                 </Border>
@@ -119,7 +121,7 @@
                                 <RowDefinition Height="30" />
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
-                            <Grid Grid.Row="0" Width="1440">
+                            <Grid Grid.Row="0" Width="{Binding WindowWidth}">
                                 <Border BorderThickness="1" BorderBrush="Black" Background="#606a62">
                                     <TextBlock Text="- DATA VIEW" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Margin="10 0" Foreground="White"></TextBlock>
                                 </Border>
@@ -138,7 +140,7 @@
                                 <RowDefinition Height="30" />
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
-                            <Grid Grid.Row="0" Width="1440">
+                            <Grid Grid.Row="0" Width="{Binding WindowWidth}">
                                 <Border BorderThickness="1" BorderBrush="Black">
                                     <TextBlock Text="- I/O &amp; CAM SETTING" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Margin="10 0" ></TextBlock>
                                 </Border>

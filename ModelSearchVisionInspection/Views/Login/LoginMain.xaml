@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ModelSearchVisionInspection.Views.Login"
         mc:Ignorable="d"
-        Title="LoginMain" Height="450" Width="800">
+        Title="LoginMain" MaxHeight="450" MaxWidth="800" MinHeight="450" MinWidth="800">
     <Grid>
         <Grid Margin ="100 60">
             <Grid.RowDefinitions>

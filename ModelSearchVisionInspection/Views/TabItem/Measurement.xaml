@@ -5,14 +5,17 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ModelSearchVisionInspection.Views.TabItem"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             d:DesignHeight="900" d:DesignWidth="1440">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
-            <RowDefinition Height="80" />
-            <RowDefinition Height="480" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="1.5*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="45" />
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Width="1440">
+        <Grid Grid.Row="0" Width="{Binding WindowWidth}">
             <Border BorderThickness="1" BorderBrush="Black" Background="#606a62">
                 <TextBlock Text="- MEASUREMENT" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Margin="10 0" Foreground="White" ></TextBlock>
             </Border>
@@ -135,7 +138,7 @@
         </Grid>
         <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" Grid.Row="2">
             <StackPanel Orientation="Horizontal">
-                <Grid Grid.Row="2" Margin="5 0" >
+                <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="480" />
                         <ColumnDefinition Width="480" />
@@ -605,5 +608,154 @@
                 </Grid>
             </StackPanel>
         </ScrollViewer>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="2*" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Button Background="#dee9cf">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Image Source="{StaticResource di_autoMod}" Width="30px" Height="30px" Margin="20 0"></Image>
+                                <TextBlock Text="Auto Mode" FontSize="17" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button Background="#dee9cf">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Image Source="{StaticResource di_save}" Width="30px" Height="30px" Margin="20 0"></Image>
+                                <TextBlock Text="Save File Management" FontSize="17" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <Grid Grid.Column="3">
+                        <Button Background="#dee9cf">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Image Source="{StaticResource di_captur}" Width="30px" Height="30px" Margin="20 0"></Image>
+                                <TextBlock Text="Display Capture" FontSize="17" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Button>
+                                <TextBlock FontSize="17" FontWeight="Bold" TextAlignment="Center">
+                                    PLC <LineBreak/> to <LineBreak/> PLC IO
+                                </TextBlock>
+                            </Button>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <DataGrid ItemsSource="{Binding MyItems}" ColumnHeaderHeight="20" AutoGenerateColumns="True" CanUserAddRows="False" CanUserDeleteRows="False" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Button>
+                                <TextBlock FontSize="17" FontWeight="Bold" TextAlignment="Center">
+                                     PLC <LineBreak/> to <LineBreak/> PLC IO
+                                </TextBlock>
+                            </Button>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <DataGrid ItemsSource="{Binding MyItems}" ColumnHeaderHeight="20" AutoGenerateColumns="True" CanUserAddRows="False" CanUserDeleteRows="False" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Column="2" Background="#0e1f06">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="1.5*" />
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0" >
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock Text="Grab Delay" VerticalAlignment="Center" Foreground="White" FontWeight="bold" FontSize="11"></TextBlock>
+                                    <xctk:IntegerUpDown Minimum="0" Maximum="9999" Value="2000" Width="80" VerticalAlignment="Center" TextAlignment="Center" Margin="5 0" />
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Column="1" >
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock Text="Auto Start[M]" VerticalAlignment="Center" Foreground="White" FontWeight="bold" FontSize="11"></TextBlock>
+                                    <Border Width="50" Height="20" Margin="5 0" CornerRadius="8" Background="LightGray">
+                                        <Button Background="Transparent">
+                                            <Image Source="{StaticResource di_start}" Width="10" Height="10"></Image>
+                                        </Button>
+                                    </Border>
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0" VerticalAlignment="Center">
+                                    <TextBlock Foreground="White" TextAlignment="Center" FontSize="14" FontWeight="Bold">
+                                        Search Pattern <LineBreak /> Model Name
+                                    </TextBlock>
+                            </Grid>
+                            <Grid Grid.Column="1" VerticalAlignment="Center">
+                                    <TextBlock Foreground="Black"  VerticalAlignment="Center" TextAlignment="Center" FontSize="14" FontWeight="Bold" Text="DN8" Background="#dee9cf" Padding="0 5" Margin="5 0" />
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="2*" />
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0.5">
+                    <Grid Grid.Row="0" Background="#dee9cf">
+                        <TextBlock  Text="Mode : Auto Start" FontSize="17" FontWeight="bold" TextAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    </Grid>
+                </Border>
+                <Border Grid.Row="1" BorderBrush="Black" BorderThickness="0.5">
+                    <Grid Grid.Row="1">
+                        <Button Background="#92f74b">
+                            <TextBlock Text="O K" FontSize="36" FontWeight="Bold"></TextBlock>
+                        </Button>
+                    </Grid>
+                </Border>
+
+            </Grid>
+        </Grid>
+        <Border Grid.Row="5" BorderBrush="Black" BorderThickness="0.5">
+            <Grid Grid.Row="5" Background="#0e1f06">
+                <TextBlock Text="{Binding CurrentDateTime}" FontSize="17" FontWeight="Bold" Foreground="White" TextAlignment="Right" VerticalAlignment="Center" Margin="10 0"></TextBlock>
+            </Grid>
+        </Border>
     </Grid>
 </UserControl>

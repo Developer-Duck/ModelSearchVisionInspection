@@ -23,7 +23,6 @@ namespace ModelSearchVisionInspection.Views.Login
             // 키보드 이벤트 핸들러 추가
             this.KeyDown += LoginMain_KeyDown;
             LogintxtUsername.KeyDown += InputField_KeyDown;
-            LogintxtPassword.KeyDown += InputField_KeyDown;
         }
 
         // 윈도우 전체에서 엔터키 처리
