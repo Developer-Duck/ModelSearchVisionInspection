@@ -7,19 +7,18 @@
         xmlns:MeasurementView="clr-namespace:ModelSearchVisionInspection.Views.TabItem"
         xmlns:ModelSettingView="clr-namespace:ModelSearchVisionInspection.Views.TabItem"
         mc:Ignorable="d"
-        Height="{Binding WindowHeight}" Width="{Binding WindowWidth}"
         WindowStyle="None" 
         AllowsTransparency="True" 
         WindowState="Maximized"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
-    <Grid VerticalAlignment="Top" Background="#0e1f06">
+    <Grid VerticalAlignment="Top" Background="{StaticResource MainBackground}">
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Border BorderThickness="1,1,1,0" BorderBrush="Black">
-            <Grid Grid.Row="0" Background="#0b1e03">
+            <Grid Grid.Row="0" Background="{StaticResource MainBackground}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="3*" />
                     <ColumnDefinition Width="*" />
@@ -58,7 +57,7 @@
                             <Setter Property="Margin" Value="0"/>
                             <Setter Property="HorizontalContentAlignment" Value="Center"/>
                             <Setter Property="VerticalContentAlignment" Value="Center"/>
-                            <Setter Property="Background" Value="#0e1f06"></Setter>
+                            <Setter Property="Background" Value="{StaticResource TabItemBackground}"></Setter>
                             <Setter Property="Foreground" Value="White"></Setter>
                             <Style.Triggers>
                                 <Trigger Property="IsSelected" Value="True">

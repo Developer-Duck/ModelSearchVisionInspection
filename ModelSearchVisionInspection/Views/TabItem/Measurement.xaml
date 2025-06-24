@@ -5,9 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ModelSearchVisionInspection.Views.TabItem"
              mc:Ignorable="d" 
-             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
-             d:DesignHeight="900" d:DesignWidth="1440">
-    <Grid>
+             d:Height="900"
+             d:Width="1440"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit">
+    <Grid Height="{Binding TabItemHight}">
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
             <RowDefinition Height="100" />
@@ -34,11 +35,11 @@
                         <RowDefinition Height="*" />
                         <RowDefinition Height="1.5*" />
                     </Grid.RowDefinitions>
-                    <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,2" Background="#828027" >
+                    <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,2" Background="{StaticResource TextMenuBackground}" >
                         <Grid Grid.Row="0">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <Image Source="{StaticResource di_search}" Width="20" Height="20" Margin="7 0"></Image>
-                                <TextBlock Text="SEARCH RESULT MODEL" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Foreground="White"></TextBlock>
+                                <TextBlock Text="SEARCH RESULT MODEL" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Foreground="{StaticResource MainFontcolor}"></TextBlock>
                             </StackPanel>
                         </Grid>
                     </Border>
@@ -47,14 +48,14 @@
                             <ColumnDefinition Width="2.5*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Border Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,0" Background="#dee9cf">
+                        <Border Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,0" Background="{StaticResource NumMenuBackground}">
                             <Grid Grid.Column="0" HorizontalAlignment="Center">
-                                <TextBlock Text="null" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                                <TextBlock Text="null" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" Foreground="{StaticResource MainFontcolor}"></TextBlock>
                             </Grid>
                         </Border>
-                        <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1,0,0,0" Background="#dee9cf">
+                        <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1,0,0,0" Background="{StaticResource NumMenuBackground}">
                             <Grid Grid.Column="1" HorizontalAlignment="Center">
-                                <TextBlock Text="null" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                                <TextBlock Text="null" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" Foreground="{StaticResource MainFontcolor}"></TextBlock>
                             </Grid>
                         </Border>
                     </Grid>
@@ -67,16 +68,16 @@
                         <RowDefinition Height="1.5*" />
                     </Grid.RowDefinitions>
                     <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,2">
-                        <Grid Grid.Row="0" Background="#193e0f">
+                        <Grid Grid.Row="0" Background="{StaticResource TextMenuBackground}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <Image Source="{StaticResource di_good}" Width="20" Height="20" Margin="7 0"></Image>
-                                <TextBlock Text="OK COUNT" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Foreground="White"></TextBlock>
+                                <TextBlock Text="OK COUNT" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Foreground="{StaticResource MainFontcolor}"></TextBlock>
                             </StackPanel>
                         </Grid>
                     </Border>
-                    <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1,0,0,0" Background="#dee9cf">
+                    <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1,0,0,0" Background="{StaticResource NumMenuBackground}">
                         <Grid Grid.Row="1" HorizontalAlignment="Center">
-                            <TextBlock Text="null" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock Text="null" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" Foreground="{StaticResource MainFontcolor}"></TextBlock>
                         </Grid>
                     </Border>
                 </Grid>
@@ -88,16 +89,16 @@
                         <RowDefinition Height="1.5*" />
                     </Grid.RowDefinitions>
                     <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,2">
-                        <Grid Grid.Row="0" Background="#e63222">
+                        <Grid Grid.Row="0" Background="{StaticResource TextMenuBackground}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <Image Source="{StaticResource di_bad}" Width="20" Height="20" Margin="7 0"></Image>
-                                <TextBlock Text="NG COUNT" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Foreground="White"></TextBlock>
+                                <TextBlock Text="NG COUNT" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Foreground="{StaticResource MainFontcolor}"></TextBlock>
                             </StackPanel>
                         </Grid>
                     </Border>
-                    <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1,0,0,0" Background="#dee9cf">
+                    <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1,0,0,0" Background="{StaticResource NumMenuBackground}">
                         <Grid Grid.Row="1" HorizontalAlignment="Center">
-                            <TextBlock Text="null" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock Text="null" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" Foreground="{StaticResource MainFontcolor}"></TextBlock>
                         </Grid>
                     </Border>
                 </Grid>
@@ -109,28 +110,28 @@
                         <RowDefinition Height="1.5*" />
                     </Grid.RowDefinitions>
                     <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,2">
-                        <Grid Grid.Row="0" Background="#969694">
+                        <Grid Grid.Row="0" Background="{StaticResource TextMenuBackground}">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="2.5*" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center">
                                 <Image Source="{StaticResource di_total_count}" Width="20" Height="20" Margin="7 0"></Image>
-                                <TextBlock Text="TOTAL COUNT" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Foreground="White"></TextBlock>
+                                <TextBlock Text="TOTAL COUNT" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Foreground="{StaticResource MainFontcolor}"></TextBlock>
                             </StackPanel>
                             <Grid Grid.Column="1">
-                                <Button Background="#636162">
+                                <Button Background="{StaticResource TextMenuBackground}">
                                     <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center">
                                         <Image Source="{StaticResource di_reset}" Width="15" Height="15" Margin="5 0" ></Image>
-                                        <TextBlock Text="Reset" FontWeight="Bold" FontSize="15" Foreground="White"></TextBlock>
+                                        <TextBlock Text="Reset" FontWeight="Bold" FontSize="15" Foreground="{StaticResource MainFontcolor}"></TextBlock>
                                     </StackPanel>
                                 </Button>
                             </Grid>
                         </Grid>
                     </Border>
-                    <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1,0,0,0" Background="#dee9cf">
+                    <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1,0,0,0" Background="{StaticResource NumMenuBackground}">
                         <Grid Grid.Row="1" HorizontalAlignment="Center">
-                            <TextBlock Text="null" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock Text="null" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" Foreground="{StaticResource MainFontcolor}"></TextBlock>
                         </Grid>
                     </Border>
                 </Grid>
@@ -140,10 +141,10 @@
             <StackPanel Orientation="Horizontal">
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="480" />
-                        <ColumnDefinition Width="480" />
-                        <ColumnDefinition Width="480" />
-                        <ColumnDefinition Width="480" />
+                        <ColumnDefinition Width="{Binding CamWidth}" />
+                        <ColumnDefinition Width="{Binding CamWidth}" />
+                        <ColumnDefinition Width="{Binding CamWidth}" />
+                        <ColumnDefinition Width="{Binding CamWidth}" />
                     </Grid.ColumnDefinitions>
                     <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0.5">
                         <Grid Grid.Column="0">
@@ -152,7 +153,7 @@
                                 <RowDefinition Height="10*" />
                                 <RowDefinition Height="35" />
                             </Grid.RowDefinitions>
-                            <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,1" Background="#0b1e03">
+                            <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,1" Background="{StaticResource CamBackground}">
                                 <Grid Grid.Row="0">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="2.5*" />
@@ -188,7 +189,7 @@
                                     <ColumnDefinition Width="25" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0,0,1,0" Background="#0b1e03">
+                                <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0,0,1,0" Background="{StaticResource CamBackground}">
                                     <Grid Grid.Column="0">
                                         <StackPanel>
                                             <Button Width="25" Height="25">
@@ -220,14 +221,14 @@
                                     </Border>
                                 </Grid>
                             </Grid>
-                            <Border Grid.Row="2" BorderBrush="Black" BorderThickness="0,1,0,0">
+                            <Border Grid.Row="2" BorderBrush="Black" BorderThickness="0,1,0,0" >
                                 <Grid Grid.Row="2">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="1.5*" />
                                         <ColumnDefinition Width="1.5*" />
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
-                                    <Grid Grid.Column="0" Background="#0b1e03">
+                                    <Grid Grid.Column="0" Background="{StaticResource CamBackground}">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="*" />
@@ -235,11 +236,11 @@
                                         <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                                             <TextBlock Text="Pattern No." FontSize="14" FontWeight="Bold" Foreground="White"></TextBlock>
                                         </Grid>
-                                        <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#dee9cf" Margin="3">
+                                        <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{StaticResource ValueAreaBackground}" Margin="3">
                                             <TextBlock Text="null" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                                         </Grid>
                                     </Grid>
-                                    <Grid Grid.Column="1" Background="#0b1e03">
+                                    <Grid Grid.Column="1" Background="{StaticResource CamBackground}">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="*" />
@@ -247,13 +248,43 @@
                                         <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                                             <TextBlock Text="Score" FontSize="14" FontWeight="Bold" Foreground="White"></TextBlock>
                                         </Grid>
-                                        <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#dee9cf" Margin="2">
+                                        <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{StaticResource ValueAreaBackground}" Margin="2">
                                             <TextBlock Text="null" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                                         </Grid>
                                     </Grid>
                                     <Grid Grid.Column="2">
                                         <Button Background="#92f74b">
                                             <TextBlock Text="Sunroof OK" FontSize="14" FontWeight="Bold"></TextBlock>
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                            <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,1" Background="{StaticResource CamBackground}">
+                                <Grid Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2.5*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10 0">
+                                        <Image Source="{StaticResource di_cam_number1}" Width="35" Height="35" Margin="15 0"/>
+                                        <TextBlock Text="CAMERA 1 IMAGE" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Foreground="White"/>
+                                       
+                                        <Ellipse Width="20" Height="20" Fill="#39FF14" Margin="15 0" />
+                                    </StackPanel>
+                                    <Grid Grid.Column="1">
+                                        <Button Background="{StaticResource CamButtonBackground}">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="1*" />
+                                                    <ColumnDefinition Width="2*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Column="0" Margin="10 0">
+                                                    <Image Source="{StaticResource di_captur}" Width="25" Height="25"/>
+                                                </Grid>
+                                                <Grid Grid.Column="1" Margin="10 0">
+                                                    <TextBlock FontSize="14" FontWeight="Bold" TextAlignment="Center" Text="Capture" Foreground="{StaticResource MainFontcolor}"><Run Text="Image"/><LineBreak/><Run/></TextBlock>
+                                                </Grid>
+                                            </Grid>
                                         </Button>
                                     </Grid>
                                 </Grid>
@@ -268,7 +299,7 @@
                                 <RowDefinition Height="35" />
                             </Grid.RowDefinitions>
                             <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,1">
-                                <Grid Grid.Row="0" Background="#0b1e03">
+                                <Grid Grid.Row="0" Background="{StaticResource CamBackground}">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="2.5*" />
                                         <ColumnDefinition Width="*" />
@@ -279,7 +310,7 @@
                                         <Ellipse Width="20" Height="20" Fill="#39FF14" Margin="15 0" ></Ellipse>
                                     </StackPanel>
                                     <Grid Grid.Column="1">
-                                        <Button Background="#dde8d0">
+                                        <Button Background="{StaticResource CamButtonBackground}">
                                             <Grid>
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition Width="1*" />
@@ -289,8 +320,8 @@
                                                     <Image Source="{StaticResource di_captur}" Width="25" Height="25"></Image>
                                                 </Grid>
                                                 <Grid Grid.Column="1" Margin="10 0">
-                                                    <TextBlock FontSize="14" FontWeight="Bold" TextAlignment="Center">
-                                                Image <LineBreak/> Capture
+                                                    <TextBlock FontSize="14" FontWeight="Bold" TextAlignment="Center" Foreground="{StaticResource MainFontcolor}">
+                                                        Image <LineBreak/> Capture
                                                     </TextBlock>
                                                 </Grid>
                                             </Grid>
@@ -304,7 +335,7 @@
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
                                 <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0,0,1,0">
-                                    <Grid Grid.Column="0" Background="#0b1e03">
+                                    <Grid Grid.Column="0" Background="{StaticResource CamBackground}">
                                         <StackPanel>
                                             <Button Width="25" Height="25">
                                                 <Image Source="{StaticResource di_tool_search}" Width="12" Height="12"></Image>
@@ -342,7 +373,7 @@
                                         <ColumnDefinition Width="1.5*" />
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
-                                    <Grid Grid.Column="0" Background="#0b1e03">
+                                    <Grid Grid.Column="0" Background="{StaticResource CamBackground}">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="*" />
@@ -350,11 +381,11 @@
                                         <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                                             <TextBlock Text="Pattern No." FontSize="15" FontWeight="Bold" Foreground="White"></TextBlock>
                                         </Grid>
-                                        <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#dee9cf" Margin="3">
+                                        <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{StaticResource ValueAreaBackground}" Margin="3">
                                             <TextBlock Text="null" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                                         </Grid>
                                     </Grid>
-                                    <Grid Grid.Column="1" Background="#0b1e03">
+                                    <Grid Grid.Column="1" Background="{StaticResource CamBackground}">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="*" />
@@ -362,7 +393,7 @@
                                         <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                                             <TextBlock Text="Score" FontSize="14" FontWeight="Bold" Foreground="White"></TextBlock>
                                         </Grid>
-                                        <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#dee9cf" Margin="2">
+                                        <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{StaticResource ValueAreaBackground}" Margin="2">
                                             <TextBlock Text="null" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                                         </Grid>
                                     </Grid>
@@ -383,7 +414,7 @@
                                 <RowDefinition Height="35" />
                             </Grid.RowDefinitions>
                             <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,1">
-                                <Grid Grid.Row="0" Background="#0b1e03">
+                                <Grid Grid.Row="0" Background="{StaticResource CamBackground}">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="2.5*" />
                                         <ColumnDefinition Width="*" />
@@ -394,7 +425,7 @@
                                         <Ellipse Width="20" Height="20" Fill="Red" Margin="15 0" ></Ellipse>
                                     </StackPanel>
                                     <Grid Grid.Column="1">
-                                        <Button Background="#dde8d0">
+                                        <Button Background="{StaticResource CamButtonBackground}">
                                             <Grid>
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition Width="1*" />
@@ -404,7 +435,7 @@
                                                     <Image Source="{StaticResource di_captur}" Width="25" Height="25"></Image>
                                                 </Grid>
                                                 <Grid Grid.Column="1" Margin="10 0">
-                                                    <TextBlock FontSize="14" FontWeight="Bold" TextAlignment="Center">
+                                                    <TextBlock FontSize="14" FontWeight="Bold" TextAlignment="Center" Foreground="{StaticResource MainFontcolor}">
                                                     Image <LineBreak/> Capture
                                                     </TextBlock>
                                                 </Grid>
@@ -418,7 +449,7 @@
                                     <ColumnDefinition Width="25" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0,0,1,0" Background="#0e1f06">
+                                <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0,0,1,0" Background="{StaticResource CamBackground}">
                                     <Grid Grid.Column="0">
                                         <StackPanel>
                                             <Button Width="25" Height="25">
@@ -457,7 +488,7 @@
                                         <ColumnDefinition Width="1.5*" />
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
-                                    <Grid Grid.Column="0" Background="#0e1f06">
+                                    <Grid Grid.Column="0" Background="{StaticResource CamBackground}">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="*" />
@@ -465,11 +496,11 @@
                                         <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                                             <TextBlock Text="Pattern No." FontSize="15" FontWeight="Bold" Foreground="White"></TextBlock>
                                         </Grid>
-                                        <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#dee9cf" Margin="3">
+                                        <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{StaticResource ValueAreaBackground}" Margin="3">
                                             <TextBlock Text="null" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                                         </Grid>
                                     </Grid>
-                                    <Grid Grid.Column="1" Background="#0e1f06">
+                                    <Grid Grid.Column="1" Background="{StaticResource CamBackground}">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="*" />
@@ -477,7 +508,7 @@
                                         <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                                             <TextBlock Text="Score" FontSize="14" FontWeight="Bold" Foreground="White"></TextBlock>
                                         </Grid>
-                                        <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#dee9cf" Margin="2">
+                                        <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{StaticResource ValueAreaBackground}" Margin="2">
                                             <TextBlock Text="null" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                                         </Grid>
                                     </Grid>
@@ -497,7 +528,7 @@
                                 <RowDefinition Height="10*" />
                                 <RowDefinition Height="35" />
                             </Grid.RowDefinitions>
-                            <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,1" Background="#0b1e03">
+                            <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,1" Background="{StaticResource CamBackground}">
                                 <Grid Grid.Row="0">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="2.5*" />
@@ -509,7 +540,7 @@
                                         <Ellipse Width="20" Height="20" Fill="#39FF14" Margin="15 0" ></Ellipse>
                                     </StackPanel>
                                     <Grid Grid.Column="1">
-                                        <Button Background="#dde8d0">
+                                        <Button Background="{StaticResource CamButtonBackground}">
                                             <Grid>
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition Width="1*" />
@@ -519,7 +550,7 @@
                                                     <Image Source="{StaticResource di_captur}" Width="25" Height="25"></Image>
                                                 </Grid>
                                                 <Grid Grid.Column="1" Margin="10 0">
-                                                    <TextBlock FontSize="14" FontWeight="Bold" TextAlignment="Center">
+                                                    <TextBlock FontSize="14" FontWeight="Bold" TextAlignment="Center" Foreground="{StaticResource MainFontcolor}">
                                                     Image <LineBreak/> Capture
                                                     </TextBlock>
                                                 </Grid>
@@ -533,7 +564,7 @@
                                     <ColumnDefinition Width="25" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0,0,1,0" Background="#0b1e03">
+                                <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0,0,1,0" Background="{StaticResource CamBackground}">
                                     <Grid Grid.Column="0">
                                         <StackPanel>
                                             <Button Width="25" Height="25">
@@ -572,7 +603,7 @@
                                         <ColumnDefinition Width="1.5*" />
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
-                                    <Grid Grid.Column="0" Background="#0b1e03">
+                                    <Grid Grid.Column="0" Background="{StaticResource CamBackground}">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="*" />
@@ -580,11 +611,11 @@
                                         <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                                             <TextBlock Text="Pattern No." FontSize="15" FontWeight="Bold" Foreground="White"></TextBlock>
                                         </Grid>
-                                        <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#dee9cf" Margin="3">
+                                        <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{StaticResource ValueAreaBackground}" Margin="3">
                                             <TextBlock Text="null" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                                         </Grid>
                                     </Grid>
-                                    <Grid Grid.Column="1" Background="#0b1e03">
+                                    <Grid Grid.Column="1" Background="{StaticResource CamBackground}">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="*" />
@@ -592,7 +623,7 @@
                                         <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                                             <TextBlock Text="Score" FontSize="14" FontWeight="Bold" Foreground="White"></TextBlock>
                                         </Grid>
-                                        <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#dee9cf" Margin="2">
+                                        <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{StaticResource ValueAreaBackground}" Margin="2">
                                             <TextBlock Text="null" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                                         </Grid>
                                     </Grid>
@@ -625,26 +656,26 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <Grid Grid.Column="0">
-                        <Button Background="#dee9cf">
+                        <Button Background="{StaticResource FooterTextMenuButtonBackground}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <Image Source="{StaticResource di_autoMod}" Width="30px" Height="30px" Margin="20 0"></Image>
-                                <TextBlock Text="Auto Mode" FontSize="17" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                                <TextBlock Text="Auto Mode" FontSize="17" FontWeight="Bold" VerticalAlignment="Center" Foreground="{StaticResource MainFontcolor}"></TextBlock>
                             </StackPanel>
                         </Button>
                     </Grid>
                     <Grid Grid.Column="1">
-                        <Button Background="#dee9cf">
+                        <Button Background="{StaticResource FooterTextMenuButtonBackground}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <Image Source="{StaticResource di_save}" Width="30px" Height="30px" Margin="20 0"></Image>
-                                <TextBlock Text="Save File Management" FontSize="17" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                                <TextBlock Text="Save File Management" FontSize="17" FontWeight="Bold" VerticalAlignment="Center" Foreground="{StaticResource MainFontcolor}"></TextBlock>
                             </StackPanel>
                         </Button>
                     </Grid>
                     <Grid Grid.Column="3">
-                        <Button Background="#dee9cf">
+                        <Button Background="{StaticResource FooterTextMenuButtonBackground}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <Image Source="{StaticResource di_captur}" Width="30px" Height="30px" Margin="20 0"></Image>
-                                <TextBlock Text="Display Capture" FontSize="17" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                                <TextBlock Text="Display Capture" FontSize="17" FontWeight="Bold" VerticalAlignment="Center" Foreground="{StaticResource MainFontcolor}"></TextBlock>
                             </StackPanel>
                         </Button>
                     </Grid>
@@ -662,8 +693,8 @@
                             <ColumnDefinition Width="2*" />
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0">
-                            <Button>
-                                <TextBlock FontSize="17" FontWeight="Bold" TextAlignment="Center">
+                            <Button Background="{StaticResource GraphBackground}">
+                                <TextBlock FontSize="17" FontWeight="Bold" TextAlignment="Center" Foreground="{StaticResource MainFontcolor}">
                                     PLC <LineBreak/> to <LineBreak/> PLC IO
                                 </TextBlock>
                             </Button>
@@ -678,8 +709,8 @@
                             <ColumnDefinition Width="2*" />
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0">
-                            <Button>
-                                <TextBlock FontSize="17" FontWeight="Bold" TextAlignment="Center">
+                            <Button Background="{StaticResource GraphBackground}">
+                                <TextBlock FontSize="17" FontWeight="Bold" TextAlignment="Center" Foreground="{StaticResource MainFontcolor}">
                                      PLC <LineBreak/> to <LineBreak/> PLC IO
                                 </TextBlock>
                             </Button>
@@ -688,7 +719,7 @@
                             <DataGrid ItemsSource="{Binding MyItems}" ColumnHeaderHeight="20" AutoGenerateColumns="True" CanUserAddRows="False" CanUserDeleteRows="False" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
                         </Grid>
                     </Grid>
-                    <Grid Grid.Column="2" Background="#0e1f06">
+                    <Grid Grid.Column="2" Background="{StaticResource SearchPatternBackground}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*" />
                             <RowDefinition Height="1.5*" />
@@ -700,15 +731,15 @@
                             </Grid.ColumnDefinitions>
                             <Grid Grid.Column="0" >
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                    <TextBlock Text="Grab Delay" VerticalAlignment="Center" Foreground="White" FontWeight="bold" FontSize="11"></TextBlock>
+                                    <TextBlock Text="Grab Delay" VerticalAlignment="Center" Foreground="{StaticResource MainFontcolor}" FontWeight="bold" FontSize="11"></TextBlock>
                                     <xctk:IntegerUpDown Minimum="0" Maximum="9999" Value="2000" Width="80" VerticalAlignment="Center" TextAlignment="Center" Margin="5 0" />
                                 </StackPanel>
                             </Grid>
                             <Grid Grid.Column="1" >
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                    <TextBlock Text="Auto Start[M]" VerticalAlignment="Center" Foreground="White" FontWeight="bold" FontSize="11"></TextBlock>
-                                    <Border Width="50" Height="20" Margin="5 0" CornerRadius="8" Background="LightGray">
-                                        <Button Background="Transparent">
+                                    <TextBlock Text="Auto Start[M]" VerticalAlignment="Center" Foreground="{StaticResource MainFontcolor}" FontWeight="bold" FontSize="11"></TextBlock>
+                                    <Border Width="50" Height="20" Margin="5 0" CornerRadius="8" Background="White" BorderBrush="Transparent">
+                                        <Button Background="Transparent" BorderThickness="0">
                                             <Image Source="{StaticResource di_start}" Width="10" Height="10"></Image>
                                         </Button>
                                     </Border>
@@ -721,12 +752,12 @@
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Grid Grid.Column="0" VerticalAlignment="Center">
-                                    <TextBlock Foreground="White" TextAlignment="Center" FontSize="14" FontWeight="Bold">
+                                <TextBlock Foreground="{StaticResource MainFontcolor}" TextAlignment="Center" FontSize="14" FontWeight="Bold">
                                         Search Pattern <LineBreak /> Model Name
                                     </TextBlock>
                             </Grid>
                             <Grid Grid.Column="1" VerticalAlignment="Center">
-                                    <TextBlock Foreground="Black"  VerticalAlignment="Center" TextAlignment="Center" FontSize="14" FontWeight="Bold" Text="DN8" Background="#dee9cf" Padding="0 5" Margin="5 0" />
+                                <TextBlock Foreground="Black"  VerticalAlignment="Center" TextAlignment="Center" FontSize="14" FontWeight="Bold" Text="DN8" Background="{StaticResource ValueAreaBackground}" Padding="0 5" Margin="5 0" />
                             </Grid>
                         </Grid>
                     </Grid>
@@ -738,14 +769,14 @@
                     <RowDefinition Height="2*" />
                 </Grid.RowDefinitions>
                 <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0.5">
-                    <Grid Grid.Row="0" Background="#dee9cf">
-                        <TextBlock  Text="Mode : Auto Start" FontSize="17" FontWeight="bold" TextAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    <Grid Grid.Row="0" Background="{StaticResource FooterTextMenuButtonBackground}">
+                        <TextBlock  Text="Mode : Auto Start" FontSize="17" FontWeight="bold" TextAlignment="Center" VerticalAlignment="Center" Foreground="{StaticResource MainFontcolor}"></TextBlock>
                     </Grid>
                 </Border>
                 <Border Grid.Row="1" BorderBrush="Black" BorderThickness="0.5">
                     <Grid Grid.Row="1">
-                        <Button Background="#92f74b">
-                            <TextBlock Text="O K" FontSize="36" FontWeight="Bold"></TextBlock>
+                        <Button Background="{StaticResource OkButtonBackground}">
+                            <TextBlock Text="O K" FontSize="36" FontWeight="Bold" Foreground="{StaticResource MainFontcolor}"></TextBlock>
                         </Button>
                     </Grid>
                 </Border>
@@ -753,8 +784,8 @@
             </Grid>
         </Grid>
         <Border Grid.Row="5" BorderBrush="Black" BorderThickness="0.5">
-            <Grid Grid.Row="5" Background="#0e1f06">
-                <TextBlock Text="{Binding CurrentDateTime}" FontSize="17" FontWeight="Bold" Foreground="White" TextAlignment="Right" VerticalAlignment="Center" Margin="10 0"></TextBlock>
+            <Grid Grid.Row="5" Background="{StaticResource FooterBackground}">
+                <TextBlock Text="{Binding CurrentDateTime}" FontSize="17" FontWeight="Bold" Foreground="{StaticResource MainFontcolor}" TextAlignment="Right" VerticalAlignment="Center" Margin="10 0"></TextBlock>
             </Grid>
         </Border>
     </Grid>

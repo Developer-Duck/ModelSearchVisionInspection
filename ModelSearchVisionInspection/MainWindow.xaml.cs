@@ -48,8 +48,5 @@ namespace ModelSearchVisionInspection
             viewModel.UpdateSize(this.ActualWidth, this.ActualHeight);
         }
 
-
     }
-
-
 }

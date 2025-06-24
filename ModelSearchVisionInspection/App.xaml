@@ -29,7 +29,23 @@
                 <ResourceDictionary Source="/Images/save.xaml" />
                 <ResourceDictionary Source="/Images/autoMod.xaml" />
                 <ResourceDictionary Source="/Images/start.xaml" />
+                
+                
             </ResourceDictionary.MergedDictionaries>
+            <SolidColorBrush x:Key="MainBackground" Color="#111B33" />
+            <SolidColorBrush x:Key="FooterBackground" Color="#0B1326" />
+            <SolidColorBrush x:Key="TabItemBackground" Color="#0D1526" />
+            <SolidColorBrush x:Key="TextMenuBackground" Color="#1B2C4E" />
+            <SolidColorBrush x:Key="NumMenuBackground" Color="#47679A" />
+            <SolidColorBrush x:Key="CamBackground" Color="#14203A" />
+            <SolidColorBrush x:Key="CamButtonBackground" Color="#152544" />
+            <SolidColorBrush x:Key="FooterTextMenuButtonBackground" Color="#172846" />
+            <SolidColorBrush x:Key="GraphBackground" Color="#3E5A84" />
+            <SolidColorBrush x:Key="SearchPatternBackground" Color="#111D35" />
+            <SolidColorBrush x:Key="OkButtonBackground" Color="#42CDC1" />
+            <SolidColorBrush x:Key="MainFontcolor" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="ValueAreaBackground" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="IconColor" Color="#98C8F3" />
         </ResourceDictionary>
     </Application.Resources>
     
